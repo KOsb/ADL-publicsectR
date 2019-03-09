@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>Kristen Osborne</copyright>
-    <lastBuildDate>Fri, 03 Apr 2015 02:13:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,10 +15,24 @@
     <item>
       <title>About</title>
       <link>/page/about/</link>
-      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/page/about/</guid>
-      <description>About Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dolor in magna lobortis egestas. Suspendisse eu erat tempor, tristique neque eu, convallis nulla. Curabitur vel bibendum lacus, at semper mauris. Suspendisse aliquet commodo ex, sed sagittis metus aliquam id. Maecenas feugiat rutrum lorem vel imperdiet. Nullam ornare lectus ut enim finibus, et porttitor mi tincidunt. Aenean lacinia, leo quis vehicula eleifend, quam libero sagittis erat, at euismod augue mauris et sapien.</description>
+      <description>What is this group for? text text text
+ADL-publicsectR has a safer spaces policy, which all members need to follow.
+Who are you? text text text
+Can I come along? Of course!
+Where do you meet? Usually in the Adelaide CBD, at whoever&amp;rsquo;s office is kind enough to let some geeks hang out in their meeting rooms after hours. For specifics contact us.
+Our safer spaces policy text text text</description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>/page/resources/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/page/resources/</guid>
+      <description>Book recomendationsTitleAuthorLinkR for Data ScienceGarrett Grolemund and Hadley Wickhamhttps://r4ds.had.co.nz/</description>
     </item>
     
     <item>
@@ -27,7 +41,7 @@
       <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
       
       <guid>/page/contact/</guid>
-      <description>Contact Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.</description>
+      <description>Contact You can email us here example@example.com or find us on twitter @example</description>
     </item>
     
   </channel>
