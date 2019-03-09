@@ -1,14 +1,29 @@
 ---
 author: My Name
-date: "2015-04-03T02:13:50Z"
-description: Things about me.
-title: About
+date: "2019-09-03"
+description: Things about us.
+title: About 
 ---
 
-## About
+## What is this group for?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dolor in magna lobortis egestas. Suspendisse eu erat tempor, tristique neque eu, convallis nulla. Curabitur vel bibendum lacus, at semper mauris. Suspendisse aliquet commodo ex, sed sagittis metus aliquam id. Maecenas feugiat rutrum lorem vel imperdiet. Nullam ornare lectus ut enim finibus, et porttitor mi tincidunt. Aenean lacinia, leo quis vehicula eleifend, quam libero sagittis erat, at euismod augue mauris et sapien. Sed id vehicula lectus, sit amet auctor ipsum. Nunc sed massa vel ex condimentum aliquam in a enim. Cras enim sem, tristique eu enim ac, congue commodo mi. Integer quis orci at dolor blandit eleifend.
+text text text
 
-## School
+ADL-publicsectR has a [safer spaces policy](#saferspaces), which all members need to follow.
 
-Sed quis pulvinar nisi, sed dapibus lacus. Mauris tempus ex ut ipsum facilisis interdum. Integer feugiat urna sed feugiat tempor. Quisque dictum vestibulum feugiat. Nunc nec est volutpat lorem imperdiet egestas sit amet ut orci. Aliquam venenatis neque ipsum, a placerat lectus cursus at. Donec pellentesque tellus hendrerit faucibus posuere. Etiam gravida consequat lectus, volutpat consectetur velit convallis nec. Praesent sagittis luctus dignissim.
+
+## Who are you?
+
+text text text
+
+## Can I come along?
+
+Of course!
+
+## Where do you meet?
+ 
+Usually in the Adelaide CBD, at whoever's office is kind enough to let some geeks hang out in their meeting rooms after hours. For specifics [contact us](/page/contact).
+
+## <a name=saferspaces></a>Our safer spaces policy
+
+text text text
