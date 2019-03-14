@@ -32,7 +32,16 @@ Our safer spaces policy text text text</description>
       <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/page/resources/</guid>
-      <description>Book recomendationsTitleAuthorLinkR for Data ScienceGarrett Grolemund and Hadley Wickhamhttps://r4ds.had.co.nz/</description>
+      <description> Book recomendations   Title Author Link    R for Data Science Garrett Grolemund and Hadley Wickham https://r4ds.had.co.nz/     </description>
+    </item>
+    
+    <item>
+      <title>Second post</title>
+      <link>/2019/03/12/2019-03-12-second-post/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/03/12/2019-03-12-second-post/</guid>
+      <description>This is a second post placeholder text.</description>
     </item>
     
     <item>
@@ -41,8 +50,8 @@ Our safer spaces policy text text text</description>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/03/09/test-post/</guid>
-      <description>testYou can email us here example@example.com or find us on twitter [@example](www.twitter.com)
-</description>
+      <description> test You can email us here example@example.com or find us on twitter [@example](www.twitter.com)
+ </description>
     </item>
     
     <item>

@@ -5,6 +5,7 @@ description:
 title: test post
 readingtime: 2
 ---
+This line was added as a test of the branch-edit-commit-pull-merge process outlined here:https://guides.github.com/activities/hello-world/
 
 ## test
 

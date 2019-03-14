@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on ADL publicsectR</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on ADL publicsectR</description>
+    <title>Tag 2 on ADL publicsectR</title>
+    <link>/tags/tag-2/</link>
+    <description>Recent content in Tag 2 on ADL publicsectR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>Kristen Osborne</copyright>
     <lastBuildDate>Tue, 12 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/tag-2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       
       <guid>/2019/03/12/2019-03-12-second-post/</guid>
       <description>This is a second post placeholder text.</description>
-    </item>
-    
-    <item>
-      <title>test post</title>
-      <link>/2019/03/09/test-post/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/03/09/test-post/</guid>
-      <description> test You can email us here example@example.com or find us on twitter [@example](www.twitter.com)
- </description>
     </item>
     
   </channel>
