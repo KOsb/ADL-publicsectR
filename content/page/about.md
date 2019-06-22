@@ -1,20 +1,24 @@
 ---
-author: My Name
-date: "2019-09-03"
 description: Things about us.
 title: About 
 ---
 
 ## What is this group for?
 
-text text text
+ADL-publicsectr is a group for those in the public sector using (or interested in using) the programming language [R](https://www.r-project.org/).
+
+We welcome people of all skill levels and experience! This is a space for learning and sharing in a postive way. We also eat cupcakes.
 
 ADL-publicsectR has a [safer spaces policy](#saferspaces), which all members need to follow.
 
 
 ## Who are you?
+We're a group of people working with data in the public sector in Adelaide. 
 
-text text text
+The founding memebers of ADL-publicsectR are
+[Owen Churches](https://twitter.com/OwenChurches), 
+[Kristen Osborne](https://twitter.com/Kristen_Osb), and
+[Mel Heap](https://twitter.com/Mel_Heap).
 
 ## Can I come along?
 

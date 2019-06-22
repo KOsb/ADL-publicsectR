@@ -1,20 +1,38 @@
 ---
-author: My Name
-date: "2019-09-03"
+title: "Resources"
+author: "My Name"
+date: '2019-09-03'
 description: Things we like
-title: Resources
 ---
-<!--- the below sets the page to render even if it encounters an error
+<!--- Set the page to render even if it encounters an error
 --->
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(error = TRUE)
 ```
 
+## Related groups
+
+```{r echo=FALSE}
+groups <- tibble::tribble(
+   ~Name, ~Description, ~Link,
+   "R-Ladies Adelaide", "R-Ladies Adelaide is a part of global R-Ladies community with a goal to bring diversity into R community and get more women excited about technology!", "https://twitter.com/RLadiesAdelaide"
+   ,"Adelaide R Users Group", "For Adelaide R users to meet with other users in a relaxed informal atmosphere.", "https://www.meetup.com/en-AU/Adelaide-R-Users/",
+   "Code Like a Girl", "Code Like a Girl is a social enterprise providing girls and women with the confidence, tools, knowledge and support to enter, and flourish, in the world of coding.", "https://codelikeagirl.org"
+  )
+```
+
+```{r echo=FALSE, results='asis'}
+knitr::kable(groups)
+ 
+```
+
 ## Book recomendations
+
 ```{r echo=FALSE}
 books <- tibble::tribble(
    ~Title, ~Author, ~Link,
-      "R for Data Science",   "Garrett Grolemund and Hadley Wickham",   "https://r4ds.had.co.nz/"
+   "R for Data Science",   "Garrett Grolemund and Hadley Wickham","https://r4ds.had.co.nz/",
+   "Made by Humans: The AI Condition", "Ellen Broad", "https://www.mup.com.au/books/made-by-humans-paperback-softback"
   )
 ```
 
