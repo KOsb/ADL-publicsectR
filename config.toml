@@ -27,13 +27,13 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     intro = true
     headline = "Adelaide publicsectR"
     description = "A group for R programmers of all experience levels in Adelaide, Australia"
-    github = "https://github.com/XXX"
+    github = "https://github.com/KOsb/ADL-publicsectR"
    # gitlab = "https://gitlab.com/XXX"
   #  linkedin = "https://linkedin.com/in/XXX/"
   #  gplus = "https://google.com/+XXX"
-    twitter = "https://twitter.com/XXX"
+    twitter = "https://twitter.com"
    # stackoverflow = "https://stackoverflow.com/users/XXX/YYY"
-    email = "XXX@example.com"
+   # email = "XXX@example.com"
     opengraph = true
     shareTwitter = true
     shareFacebook = true
@@ -53,22 +53,27 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     post = "/:year/:month/:day/:filename/"
 
 [[menu.main]]
+    name = "Home"
+    url = "/page/home"
+    weight = 1
+    
+[[menu.main]]
     name = "Blog"
     url = "/"
-    weight = 1
+    weight = 4
 
 [[menu.main]]
     name = "Contact"
     url = "/page/contact/"
-    weight = 2
+    weight = 3
 
 [[menu.main]]
     name = "About"
     url = "/page/about/"
-    weight = 3
+    weight = 2
     
 [[menu.main]]
     name = "Resources"
     url = "/page/resources/"
-    weight = 4
+    weight = 5
 
