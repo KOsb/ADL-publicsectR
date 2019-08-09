@@ -27,9 +27,9 @@
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/03/09/test-post/</guid>
-      <description>This line was added as a test of the branch-edit-commit-pull-merge process outlined here:https://guides.github.com/activities/hello-world/
-testYou can email us here example@example.comor find us on twitter [@example](www.twitter.com)
-</description>
+      <description> This line was added as a test of the branch-edit-commit-pull-merge process outlined here:https://guides.github.com/activities/hello-world/
+test You can email us here example@example.com or find us on twitter [@example](www.twitter.com)
+ </description>
     </item>
     
   </channel>
