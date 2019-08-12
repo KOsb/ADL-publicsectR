@@ -47,5 +47,5 @@ Mel Heap:
 
 Owen Churches: [ofchurches@gmail.com](ofchurches@gmail.com)
 
-The founders will lookseriously and prompty at the case. If one of the founders is the person doing the harasing, that person will recuse themselves from the matter. The founders will respond as promptly as they can. Harasers will be asked to stop the harmful behaviour imediately. Beyond this, the founders may take any action they deem appropriate including but not limited to banning harasers from future public_sectR events and identifying the harasser to other organisaions or the public.
+The founders will look seriously and promptly at the case. If one of the founders is the person doing the harassing, that person will recuse themselves from the matter. The founders will respond as promptly as they can. Harassers will be asked to stop the harmful behaviour immediately. Beyond this, the founders may take any action they deem appropriate including but not limited to banning harassers from future public_sectR events and identifying the harasser to other organisations or the public.
 
