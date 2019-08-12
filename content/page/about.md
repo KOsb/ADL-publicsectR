@@ -41,7 +41,7 @@ One aspect of behaviour that is particularly important to us is the potential fo
 
 If you are harased or believe that someone else has been harrased at a public_sectR event please contact one of the founders:
 
-Kristen Osborne: [kristen.osb@gmail.com)(kristen.osb@gmail.com)
+Kristen Osborne: [kristen.osb@gmail.com](kristen.osb@gmail.com)
 
 Mel Heap:
 
