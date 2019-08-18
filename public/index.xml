@@ -31,23 +31,13 @@
     </item>
     
     <item>
-      <title>Second post</title>
-      <link>/2019/03/12/2019-03-12-second-post/</link>
-      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      <title>Reasons to use R in the public sector number 1: Replicability</title>
+      <link>/2019/08/18/2019-08-18-reasons-to-use-r-in-the-public-sector-number-1-replicability/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/03/12/2019-03-12-second-post/</guid>
-      <description>This is a second post placeholder text.</description>
-    </item>
-    
-    <item>
-      <title>test post</title>
-      <link>/2019/03/09/test-post/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/03/09/test-post/</guid>
-      <description> This line was added as a test of the branch-edit-commit-pull-merge process outlined here:https://guides.github.com/activities/hello-world/
-test You can email us here example@example.com or find us on twitter [@example](www.twitter.com)
- </description>
+      <guid>/2019/08/18/2019-08-18-reasons-to-use-r-in-the-public-sector-number-1-replicability/</guid>
+      <description>Start here  As public sector workers who do stuff with data we frequently find our bosses saying “Hey, could you make a plot of these data”. We say, “Sure!” and then we typically:
+Open the data in Excel Cut out irrelevant bits and move stuff around so that it makes sense Plot it  This works pretty well and we’ve all gotten pretty good at it. But there are some problems beneath the surface that make our lives less fun and makes our work less useful.</description>
     </item>
     
     <item>

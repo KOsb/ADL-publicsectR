@@ -1,0 +1,111 @@
+---
+title: 'Reasons to use R in the public sector number 1: Replicability'
+author: public_sectR
+date: '2019-08-18'
+slug: reasons-to-use-r-in-the-public-sector-number-1-replicability
+categories: []
+tags:
+  - Reasons to use R
+description: ''
+---
+
+
+
+<div id="start-here" class="section level1">
+<h1>Start here</h1>
+<div class="figure">
+<img src="https://media.giphy.com/media/l1IY5NRhxdCJYxsmA/giphy.gif" />
+
+</div>
+<p>As public sector workers who do stuff with data we frequently find our bosses saying “Hey, could you make a plot of these data”. We say, “Sure!” and then we typically:</p>
+<ol style="list-style-type: decimal">
+<li>Open the data in Excel</li>
+<li>Cut out irrelevant bits and move stuff around so that it makes sense</li>
+<li>Plot it</li>
+</ol>
+<p>This works pretty well and we’ve all gotten pretty good at it. But there are some problems beneath the surface that make our lives less fun and makes our work less useful. Having been in the public service for two years now, the biggest problem I’m feeling with this approach is that all the work done in steps 2. and 3. only makes this one plot. This problem typically comes to the surface when our bosses say at a later date “Hey, you know that plot you made back then, could you update it?”. We say “Sure!” and then we typically:</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Open the new data in Excel</li>
+<li>Cut out irrelevant bits and move stuff around so that it makes sense</li>
+<li>Plot it</li>
+</ol>
+<p>So, to make another plot requires doing all the same bits of pointing, clicking, writing formulas over again. This problem only gets bigger if the person who produced the first plot has left and you are asked to update someone a colleague’s plot. It can be hard to tell which bits they cut out and how they rearranged the data in the spreadsheet.</p>
+<p>This is one of the reasons why using a programming language such as R is more useful than a spreadsheet such as Excel. In R, the commands to cut up, arrange and plot data can be:</p>
+<ol style="list-style-type: decimal">
+<li>Written once and then applied to future data sets so work on making the second and subsequent plots is massively reduced</li>
+<li>Stored and read by by other people (including future versions of ourselves) so make sense of what we’ve done and apply it to new situations</li>
+</ol>
+</div>
+<div id="move-onto-here" class="section level1">
+<h1>Move onto here</h1>
+<p>So, how would this be done in R? There are lots of ways to achieve this but here is one…</p>
+<p>Lets say that you are asked to plot the number of children resident in South Australia in 2017. You are given a data set called <code>sa_pop</code> with the population for each year of age in each year going back to 1971. The first few lines of the data set look like this:<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Year</th>
+<th align="right">Age</th>
+<th align="right">Population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1971</td>
+<td align="right">0</td>
+<td align="right">22184</td>
+</tr>
+<tr class="even">
+<td align="left">1972</td>
+<td align="right">0</td>
+<td align="right">22077</td>
+</tr>
+<tr class="odd">
+<td align="left">1973</td>
+<td align="right">0</td>
+<td align="right">21030</td>
+</tr>
+<tr class="even">
+<td align="left">1974</td>
+<td align="right">0</td>
+<td align="right">19828</td>
+</tr>
+<tr class="odd">
+<td align="left">1975</td>
+<td align="right">0</td>
+<td align="right">19732</td>
+</tr>
+<tr class="even">
+<td align="left">1976</td>
+<td align="right">0</td>
+<td align="right">18998</td>
+</tr>
+</tbody>
+</table>
+<p>The code to produce the plot and its result look like this:</p>
+<pre class="r"><code>sa_pop %&gt;%
+  filter(Year == &quot;2017&quot;) %&gt;%
+  ggplot(aes(x = Age, y = Population)) +
+  geom_col() +
+  labs(title = &quot;Population of children resident in South Australia in 2017&quot;)</code></pre>
+<p><img src="/post/2019-08-18-reasons-to-use-r-in-the-public-sector-number-1-replicability_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>That’s it!</p>
+<p>And, as you can probably guess, that means you only have to change one thing to update it for 2018!</p>
+<pre class="r"><code>sa_pop %&gt;%
+  filter(Year == &quot;2018&quot;) %&gt;%
+  ggplot(aes(x = Age, y = Population)) +
+  geom_col() +
+  labs(title = &quot;Population of children resident in South Australia in 2018&quot;)</code></pre>
+<p><img src="/post/2019-08-18-reasons-to-use-r-in-the-public-sector-number-1-replicability_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="finish-here" class="section level1">
+<h1>Finish here</h1>
+<p>At this stage I might dwell on one other thing I really like about using R to do this sort of work rather than Excel. I like that the effort I’ve gone through to make the plot is visible to my boss.</p>
+<p>Often when I used to use Excel to make a plot, the only thing I had to show for my labour was the finished product. And that only came after a lot of work. Meanwhile, my colleagues who wrote policy could circulate drafts of their writing, which showed that they were producing work in an orderly process.</p>
+<p>By writing code instead of clicking around in a spreadsheet I, and my boss, can see that there is something I have done, even if its not finished yet.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The data file is <a href="https://www.abs.gov.au/AUSSTATS/ABS@Archive.nsf/log?openagent&amp;3101054.xls&amp;3101.0&amp;Time%20Series%20Spreadsheet&amp;0846E758F6871538CA258368001000F2&amp;0&amp;Jun%202018&amp;20.12.2018&amp;Latest">here</a> and the code that reshaped it can be seen in the .rmd file on GitHub for this post<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
