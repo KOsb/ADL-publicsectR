@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on ADL publicsectR</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on ADL publicsectR</description>
+    <title>Reasons to Use R on ADL publicsectR</title>
+    <link>/tags/reasons-to-use-r/</link>
+    <description>Recent content in Reasons to Use R on ADL publicsectR</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>Kristen Osborne</copyright>
     <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/reasons-to-use-r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

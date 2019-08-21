@@ -1,0 +1,91 @@
+---
+title: 'Reasons to use R in the public sector number 1: Replicability'
+author: public_sectR
+date: '2019-08-18'
+slug: reasons-to-use-r-in-the-public-sector-number-1-replicability
+categories: []
+tags:
+  - Reasons to use R
+description: ''
+---
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(here)
+library(readxl)
+library(tidyverse)
+library(broom)
+library(knitr)
+
+sa_pop <- read_excel(here("static/3101054.xls"), 
+sheet = "Data1") %>%
+  select(X__1, `Estimated Resident Population ;  Persons ;  0 ;`: `Estimated Resident Population ;  Persons ;  17 ;`) %>%
+  slice(10:n()) %>%
+  mutate(X__1 = as.Date(as.numeric(X__1), origin = "1899-12-30")) %>%
+  mutate_at(vars(2:19), as.numeric) %>%
+  rename("Year" = X__1) %>%
+  mutate(Year = str_sub(Year, 1, 4)) %>%
+  gather(key = "Age", value = "Population", -Year) %>%
+  mutate(Age = str_extract(Age, "\\d+(?=\\D*$)")) %>%
+  mutate(Age = as.numeric(Age))
+```
+
+# Start here
+![](https://media.giphy.com/media/l1IY5NRhxdCJYxsmA/giphy.gif)
+
+As public sector workers who do stuff with data we frequently find our bosses saying "Hey, could you make a plot of these data". We say, "Sure!" and then we typically:
+  
+1. Open the data in Excel
+2. Cut out irrelevant bits and move stuff around so that it makes sense
+3. Plot it
+
+This works pretty well and we've all gotten pretty good at it. But there are some problems beneath the surface that make our lives less fun and makes our work less useful. Having been in the public service for two years now, the biggest problem I'm feeling with this approach is that all the work done in steps 2. and 3. only makes this one plot. This problem typically comes to the surface when our bosses say at a later date "Hey, you know that plot you made back then, could you update it?". We say "Sure!" and then we typically:
+  
+4. Open the new data in Excel
+5. Cut out irrelevant bits and move stuff around so that it makes sense
+6. Plot it
+
+So, to make another plot requires doing all the same bits of pointing, clicking, writing formulas over again. This problem only gets bigger if the person who produced the first plot has left and you are asked to update someone a colleague's plot. It can be hard to tell which bits they cut out and how they rearranged the data in the spreadsheet.
+
+This is one of the reasons why using a programming language such as R is more useful than a spreadsheet such as Excel. In R, the commands to cut up, arrange and plot data can be:
+
+1. Written once and then applied to future data sets so work on making the second and subsequent plots is massively reduced
+2. Stored and read by by other people (including future versions of ourselves) so make sense of what we've done and apply it to new situations
+
+#Move onto here
+So, how would this be done in R? There are lots of ways to achieve this but here is one...
+
+Lets say that you are asked to plot the number of children resident in South Australia in 2017. You are given a data set called `sa_pop` with the population for each year of age in each year going back to 1971. The first few lines of the data set look like this:^[The data file is [here](https://www.abs.gov.au/AUSSTATS/ABS@Archive.nsf/log?openagent&3101054.xls&3101.0&Time%20Series%20Spreadsheet&0846E758F6871538CA258368001000F2&0&Jun%202018&20.12.2018&Latest) and the code that reshaped it can be seen in the .rmd file on GitHub for this post].
+
+```{r echo=FALSE}
+sa_pop %>%
+  head() %>%
+  kable()
+```
+
+The code to produce the plot and its result look like this:
+
+```{r}
+sa_pop %>%
+  filter(Year == "2017") %>%
+  ggplot(aes(x = Age, y = Population)) +
+  geom_col() +
+  labs(title = "Population of children resident in South Australia in 2017")
+```
+
+That's it!
+
+And, as you can probably guess, that means you only have to change one thing to update it for 2018!
+
+```{r}
+sa_pop %>%
+  filter(Year == "2018") %>%
+  ggplot(aes(x = Age, y = Population)) +
+  geom_col() +
+  labs(title = "Population of children resident in South Australia in 2018")
+```
+
+#Finish here
+At this stage I might dwell on one other thing I really like about using R to do this sort of work rather than Excel. I like that the effort I've gone through to make the plot is visible to my boss.
+
+Often when I used to use Excel to make a plot, the only thing I had to show for my labour was the finished product. And that only came after a lot of work. Meanwhile, my colleagues who wrote policy could circulate drafts of their writing, which showed that they were producing work in an orderly process.
+
+By writing code instead of clicking around in a spreadsheet I, and my boss, can see that there is something I have done, even if its not finished yet.
