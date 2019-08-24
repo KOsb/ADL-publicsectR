@@ -57,6 +57,7 @@ Lets say that you are asked to plot the number of children resident in South Aus
 
 ```{r echo=FALSE}
 sa_pop %>%
+  arrange(Year) %>%
   head() %>%
   kable()
 ```
