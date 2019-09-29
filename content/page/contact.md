@@ -1,11 +1,10 @@
 ---
-author: My Name
-date: "2015-04-03T02:13:50Z"
+author: Public Sectr Adelaide
 description: How to contact us
 title: Contact
 ---
 
 ## Contact
 
-You can email us here [example@example.com](mailto:example@example.com)
-or find us on twitter [@example](www.twitter.com)
+You can email us here [publicsectradelaide@gmail.com](mailto:publicsectradelaide@gmail.com)
+or find us on twitter [@PublicSectRAdl](www.twitter.com/PublicSectRAdl)

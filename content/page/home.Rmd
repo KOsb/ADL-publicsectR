@@ -1,7 +1,7 @@
 ---
-title: "Adelaide publicsectR"
+title: "Public SectR Adelaide"
 author: "My Name"
 date: '2019-09-03'
-description: A group for R programmers of all experience levels in Adelaide, Australia
+description: A group for those in the public sector in South Australia who use (or would like to use) the R language. 
 ---
 

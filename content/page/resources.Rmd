@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-author: "My Name"
+author: "Public SectR Adelaide"
 date: '2019-09-03'
 description: Things we like
 ---
