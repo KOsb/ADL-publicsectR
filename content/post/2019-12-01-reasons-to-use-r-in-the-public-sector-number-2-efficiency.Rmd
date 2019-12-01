@@ -1,0 +1,149 @@
+---
+title: 'Reasons to use R in the public sector number 2: Efficiency'
+author: ''
+date: '2019-12-01'
+slug: reasons-to-use-r-in-the-public-sector-number-2-efficiency
+categories: []
+tags:
+  - Reasons to use R
+description: ''
+---
+# Background
+In the [previous post](http://publicsectradelaide.rbind.io/2019/08/18/2019-08-18-reasons-to-use-r-in-the-public-sector-number-1-replicability/) on this blog, we introduced the idea of taking data that public servants routinely use and turning it into a figure that can be easily updated each time new data is added.
+
+However, there was a step missing in that explanation: getting the data in a suitable shape.
+
+![](https://media.giphy.com/media/3oriff3KLNjzN4nIru/source.gif)
+
+But this is a really important function of a government data scientist (or any data scientist) because data is stored and shared in all sorts of shapes and sizes but to analyse it in R, we really need it in the shape that R needs.
+
+So, this is a blog post about getting data into the shape needed for analysis.
+
+# Tidying up
+First, we need to load the necessary packages. For locating the files on the system we need `here`, for reading in the original file we need `readxl`, for doing all the re-shaping we need `tidyverse` and for viewing the tables of data we need `knitr`.
+
+```{r message=FALSE, warning=FALSE}
+library(here)
+library(readxl)
+library(tidyverse)
+library(knitr)
+```
+
+We can have a look at the original data set in this way
+
+```{r message=FALSE, warning=FALSE}
+sa_pop <- read_excel(here("static/3101054.xls"), 
+sheet = "Data1")
+
+sa_pop %>%
+  kable()
+```
+
+So, there are several reasons this data is hard to analyse:
+
+1. The first column should be a date but it looks like an incomprehensible number and is named something odd.
+2. There are rows of information about the data set at the top of the file that we don't want to use as part of the analysis.
+4. . We have column of data about ages we don't want to deal with (people over 17).
+5. The columns of population counts are not imported as numbers.
+
+So, lets start...
+
+We re-import the data, this time specifying the format of the first column as a date. And while we're at it, lets give it a sensible name.
+
+```{r message=FALSE, warning=FALSE}
+sa_pop <- read_excel(here("static/3101054.xls"), 
+           sheet = "Data1", 
+           col_types = c("date", rep("text", 250)
+           )
+) %>%
+  rename(Date = `...1`)
+```
+
+We remove the unnecessary rows by using `slice` to select the rows we want.
+
+```{r}
+sa_pop <- sa_pop %>%
+  slice(10:n())
+```
+
+We remove the unnecessary columns by using `select` to select the columns we want.
+
+```{r}
+sa_pop <- sa_pop %>%
+  select(Date, `Estimated Resident Population ;  Persons ;  0 ;`: `Estimated Resident Population ;  Persons ;  17 ;`)
+```
+
+This now gives us nicely rectangular data with each row as a year and each column as an age group.
+
+```{r}
+sa_pop %>%
+  head() %>%
+  kable()
+```
+
+This is already a seriously big achievement. And we should be proud of how useful it is to have this done in code rather than in cutting and pasting bit of Excel. Its way more efficient to write the code once because now we can run it repeatedly, we'll never forgot the way we've cut and past data and if someone else comes along they can see exactly how it was done.
+
+But to analyse this in R we need to do one last step. We need to re-shape this data into a particular shape. There is lots written on this because its a really common task for data scientists to have to do. So, have a read [here](https://tidyr.tidyverse.org/articles/pivot.html) if you'd like to explore this more.
+
+For our purpose here lets have a look at the effect of this one line of code using the `pivot_longer` function.
+
+```{r}
+sa_pop <- sa_pop %>%
+  pivot_longer(names_to = "Age", values_to = "Population", -Date)
+
+sa_pop %>%
+  head() %>%
+  kable()
+```
+
+What that line of code did was take all the data in the columns that had a population measurement (that is, all the columns except "Date") and turned them into a single column called "Population". Then it created a new column called "Age" that inserted the name of each original column into the row that matches both the "Date" and the "Population".
+
+# Using it
+Before we dive into using it, this is a good place to fix the final problem we identified in the data, that the population values are text rather than numbers.
+
+```{r}
+sa_pop <- sa_pop %>%
+  mutate(Population = as.numeric(Population))
+```
+
+Then, for the sake of plotting neatly, lets just take the age from "Age" and leave of the "Estimated Resident Population" bit and take just the year from "Date".
+
+```{r}
+sa_pop <- sa_pop %>%
+  mutate(Age = str_extract(Age, "\\d+(?=\\D*$)")) %>%
+  mutate(Age = as.numeric(Age))  %>%
+  mutate(Date = str_sub(Date, 1, 4))
+```
+
+Data in this shape is sooooo useful for testing different analyses. So, just to finish this post off, we might wonder, what is the population of South Australia for each age of childhood in each year?
+
+We could show this on a single plot with age on the horizontal axis and each year as a different line.
+
+```{r}
+sa_pop %>%
+  mutate(Date = as.factor(Date)) %>%
+  ggplot(aes(x = Age, y = Population, colour = Date)) + 
+  geom_line()
+```
+
+Interpreting this many lines might be unclear so we can quickly select a few exemplars and re-plot it.
+
+```{r}
+sa_pop %>%
+  filter(Date %in% c(1980, 1990, 2000, 2010)) %>%
+  mutate(Date = as.factor(Date)) %>%
+  ggplot(aes(x = Age, y = Population, colour = Date)) + 
+  geom_line()
+```
+
+Or we might want to try and show the interaction between age and date. This is useful to see the effect of particular cohorts aging.
+
+```{r}
+sa_pop %>%
+  ggplot(aes(x = Age, y = Date, fill = Population)) + 
+  geom_tile() + 
+  scale_fill_gradient(low="yellow", high="red")
+```
+# Summing up
+
+This sort of work, finding, shaping, naming and generally tending to the data is a really important part of the job of a data scientist. I hope that by doing this work in code it makes the process more efficient. But I also hope it makes us more proud of having done it. Its not just an annoying part of the work that no one sees. By writing it in code this work is front and center and the top of our work. And who knows, by drawing attention to it, it might even provoke someone into sharing the original data in a better format to begin with!

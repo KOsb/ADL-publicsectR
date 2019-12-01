@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>Kristen Osborne</copyright>
-    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reasons to use R in the public sector number 2: Efficiency</title>
+      <link>/2019/12/01/2019-12-01-reasons-to-use-r-in-the-public-sector-number-2-efficiency/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/12/01/2019-12-01-reasons-to-use-r-in-the-public-sector-number-2-efficiency/</guid>
+      <description>Background In the previous post on this blog, we introduced the idea of taking data that public servants routinely use and turning it into a figure that can be easily updated each time new data is added.
+However, there was a step missing in that explanation: getting the data in a suitable shape.
+But this is a really important function of a government data scientist (or any data scientist) because data is stored and shared in all sorts of shapes and sizes but to analyse it in R, we really need it in the shape that R needs.</description>
+    </item>
     
     <item>
       <title>Adelaide publicsectR</title>
@@ -41,15 +52,6 @@ Open the data in Excel Cut out irrelevant bits and move stuff around so that it 
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>/page/contact/</link>
-      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
-      
-      <guid>/page/contact/</guid>
-      <description>Contact You can email us here example@example.com or find us on twitter @example</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -66,8 +68,17 @@ Open the data in Excel Cut out irrelevant bits and move stuff around so that it 
       <guid>/page/about/</guid>
       <description>What is this group for? ADL-publicsectr is a group for those in the public sector using (or interested in using) the programming language R.
 We welcome people of all skill levels and experience! This is a space for learning and sharing in a postive way. We also eat cupcakes.
-ADL-publicsectR has a safer spaces policy, which all members need to follow.
+ADL-publicsectR has a Code of Conduct, which all members need to follow.
 Who are you? We&amp;rsquo;re a group of people working with data in the public sector in Adelaide.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/page/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/contact/</guid>
+      <description>Contact You can email us here publicsectradelaide@gmail.com or find us on twitter @PublicSectRAdl</description>
     </item>
     
   </channel>

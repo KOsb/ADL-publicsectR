@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>Kristen Osborne</copyright>
-    <lastBuildDate>Sun, 18 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reasons to use R in the public sector number 2: Efficiency</title>
+      <link>/2019/12/01/2019-12-01-reasons-to-use-r-in-the-public-sector-number-2-efficiency/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/12/01/2019-12-01-reasons-to-use-r-in-the-public-sector-number-2-efficiency/</guid>
+      <description>Background In the previous post on this blog, we introduced the idea of taking data that public servants routinely use and turning it into a figure that can be easily updated each time new data is added.
+However, there was a step missing in that explanation: getting the data in a suitable shape.
+But this is a really important function of a government data scientist (or any data scientist) because data is stored and shared in all sorts of shapes and sizes but to analyse it in R, we really need it in the shape that R needs.</description>
+    </item>
     
     <item>
       <title>Reasons to use R in the public sector number 1: Replicability</title>
