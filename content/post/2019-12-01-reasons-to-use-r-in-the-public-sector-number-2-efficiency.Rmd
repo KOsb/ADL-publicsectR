@@ -43,7 +43,7 @@ So, there are several reasons this data is hard to analyse:
 
 1. The first column should be a date but it looks like an incomprehensible number and is named something odd.
 2. There are rows of information about the data set at the top of the file that we don't want to use as part of the analysis.
-4. . We have column of data about ages we don't want to deal with (people over 17).
+4. We have a column of data about ages we don't want to deal with (people over 17).
 5. The columns of population counts are not imported as numbers.
 
 So, lets start...
@@ -106,7 +106,7 @@ sa_pop <- sa_pop %>%
   mutate(Population = as.numeric(Population))
 ```
 
-Then, for the sake of plotting neatly, lets just take the age from "Age" and leave of the "Estimated Resident Population" bit and take just the year from "Date".
+Then, for the sake of plotting neatly, lets just take the age from "Age" and leave off the "Estimated Resident Population" bit and take just the year from "Date".
 
 ```{r}
 sa_pop <- sa_pop %>%
