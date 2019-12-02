@@ -31,15 +31,6 @@
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>/page/contact/</link>
-      <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
-      
-      <guid>/page/contact/</guid>
-      <description>Contact You can email us here example@example.com or find us on twitter @example</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -56,8 +47,17 @@
       <guid>/page/about/</guid>
       <description>What is this group for? ADL-publicsectr is a group for those in the public sector using (or interested in using) the programming language R.
 We welcome people of all skill levels and experience! This is a space for learning and sharing in a postive way. We also eat cupcakes.
-ADL-publicsectR has a safer spaces policy, which all members need to follow.
+ADL-publicsectR has a Code of Conduct, which all members need to follow.
 Who are you? We&amp;rsquo;re a group of people working with data in the public sector in Adelaide.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/page/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/page/contact/</guid>
+      <description>Contact You can email us here publicsectradelaide@gmail.com or find us on twitter @PublicSectRAdl</description>
     </item>
     
   </channel>
